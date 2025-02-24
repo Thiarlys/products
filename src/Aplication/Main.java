@@ -19,7 +19,20 @@ public class Main {
         System.out.println("Quantidade ");
         product01.quantity = sc.nextInt();
 
-        System.out.println("Nome " + product01.name + ", preço " + product01.price + ", Quantidade " + product01.quantity);
+        System.out.println();
+        System.out.println("Informações do estoque: " + product01);
+
+        System.out.println("Entre com a quantidade que deseja adicionar do estoque: ");
+        int quantityAdd = sc.nextInt();
+        product01.addProducts(quantityAdd);
+        System.out.println();
+        System.out.println("Informações do estooque atualizadas: " + product01);
+
+        System.out.println("Entre com a quantidade que deseja remover do estoque: ");
+        int quantityRemove = sc.nextInt();
+        product01.removeProducts(quantityRemove);
+        System.out.println();
+        System.out.println("Informações do estooque atualizadas: " + product01);
 
         sc.close();
     }
